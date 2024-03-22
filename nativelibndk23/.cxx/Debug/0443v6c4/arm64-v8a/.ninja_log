@@ -1,4 +1,0 @@
-# ninja log v5
-0	214	1711111114889562520	CMakeFiles/nativelibndk23.dir/nativelibndk23.cpp.o	7fbd59b01725fc8e
-215	254	1711111114928331106	/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/nativelibndk23/build/intermediates/cxx/Debug/0443v6c4/obj/arm64-v8a/libnativelibndk23.so	caffe042a34edc67
-0	11	0	clean	e644f3c916fbd476

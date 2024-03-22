@@ -1,4 +1,0 @@
-# ninja log v5
-1	443	1711111114100476893	CMakeFiles/ndksandbox.dir/native-lib.cpp.o	356dea43cfc39f60
-444	503	1711111114163444382	/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/app/build/intermediates/cxx/Debug/6wi612o2/obj/arm64-v8a/libndksandbox.so	db30671def93634b
-0	10	0	clean	e644f3c916fbd476

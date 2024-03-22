@@ -16,12 +16,20 @@ android {
             externalNativeBuild {
                 cmake {
                     arguments.add("-DANDROID_STL=c++_shared")
+                    arguments.add("-DCMAKE_BUILD_TYPE=Release")
 //                    arguments.add("-DANDROID_STL=none")
                 }
             }
         }
 
         ndkVersion = "23.2.8568313"
+//        ndkVersion = "21.4.7075529"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags.add("-fno-rtti")
+            }
+        }
     }
 
     buildTypes {

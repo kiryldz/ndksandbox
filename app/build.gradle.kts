@@ -15,6 +15,7 @@ android {
         versionName = "1.0"
 
         ndkVersion = "21.4.7075529"
+//        ndkVersion = "23.2.8568313"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -22,6 +23,7 @@ android {
             externalNativeBuild {
                 cmake {
                     arguments.add("-DANDROID_STL=c++_shared")
+                    arguments.add("-DCMAKE_BUILD_TYPE=Release")
                 }
             }
         }

@@ -38,7 +38,9 @@ project("nativelibndk23")
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        nativelibndk23.cpp)
+        nativelibndk23.cpp
+        test.cpp
+        )
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library

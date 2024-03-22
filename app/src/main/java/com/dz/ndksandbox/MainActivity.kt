@@ -19,7 +19,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Example of a call to a native method
-        binding.sampleText.text = "${stringFromJNI()}\n${NativeLibNdk23().stringFromJNI()}"
+//        binding.sampleText.text = "${stringFromJNI()}\n${NativeLibNdk23().stringFromJNI()}"
+
+        val libInstance = NativeLibNdk23()
+        val stringFromLib = libInstance.getPointer()
+        binding.sampleText.text = "${stringFromJNI()}\n${processPointer(stringFromLib)}"
     }
 
     /**
@@ -27,6 +31,8 @@ class MainActivity : AppCompatActivity() {
      * which is packaged with this application.
      */
     private external fun stringFromJNI(): String
+
+    private external fun processPointer(pointer: Long): String
 
     companion object {
         // Used to load the 'ndksandbox' library on application startup.

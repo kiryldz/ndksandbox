@@ -7,6 +7,7 @@ class NativeLibNdk23 {
      * which is packaged with this application.
      */
     external fun stringFromJNI(): String
+    external fun getPointer(): Long
 
     companion object {
         // Used to load the 'nativelibndk23' library on application startup.
