@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/nativelibndk23/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/kiryldzehtsiarenka/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/nativelibndk23/.cxx/Debug/0443v6c4/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/kiryldzehtsiarenka/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/nativelibndk23/.cxx/Debug/0443v6c4/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "nativelibndk23::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "nativelibndk23",
+      "output": "/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/nativelibndk23/build/intermediates/cxx/Debug/0443v6c4/obj/x86/libnativelibndk23.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/kiryldzehtsiarenka/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/kiryldzehtsiarenka/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

@@ -1,0 +1,3 @@
+/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/app/.cxx/Debug/6wi612o2/x86/CMakeFiles/ndksandbox.dir
+/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/app/.cxx/Debug/6wi612o2/x86/CMakeFiles/edit_cache.dir
+/Users/kiryldzehtsiarenka/AndroidStudioProjects/NDKSandbox/app/.cxx/Debug/6wi612o2/x86/CMakeFiles/rebuild_cache.dir
