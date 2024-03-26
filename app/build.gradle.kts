@@ -16,19 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        ndkVersion = "21.4.7075529"
-//        ndkVersion = "23.2.8568313"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        ndk {
-            externalNativeBuild {
-                cmake {
-                    arguments.add("-DANDROID_STL=c++_shared")
-                    arguments.add("-DCMAKE_BUILD_TYPE=Release")
-                }
-            }
-        }
     }
 
     buildTypes {
@@ -56,6 +44,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    packagingOptions {
+        pickFirst("**/libc++_shared.so")
+    }
 }
 
 dependencies {
@@ -68,7 +60,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-//    implementation(project(":nativelibndk23"))
-//    implementation(name = "nativelibndk23-release", ext = "aar")
     implementation(files("../nativelibndk23/build/outputs/aar/nativelibndk23-release.aar"))
+    implementation(files("../nativelibndk21/build/outputs/aar/nativelibndk21-release.aar"))
 }

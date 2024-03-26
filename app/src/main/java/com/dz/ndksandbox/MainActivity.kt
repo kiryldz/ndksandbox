@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.dz.nativelibndk21.NativeLibNdk21
 import com.dz.nativelibndk23.NativeLibNdk23
 import com.dz.ndksandbox.databinding.ActivityMainBinding
 
@@ -18,26 +19,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Example of a call to a native method
-//        binding.sampleText.text = "${stringFromJNI()}\n${NativeLibNdk23().stringFromJNI()}"
+//        val libNdk23Instance = NativeLibNdk23()
+//        val pointerFromNdk23 = libNdk23Instance.getPointer()
+//        val libNdk21Instance = NativeLibNdk21()
+//        binding.sampleText.text = libNdk21Instance.processPointer(pointerFromNdk23)
 
-        val libInstance = NativeLibNdk23()
-        val stringFromLib = libInstance.getPointer()
-        binding.sampleText.text = "${stringFromJNI()}\n${processPointer(stringFromLib)}"
-    }
+        val libNdk23Instance = NativeLibNdk23()
+        libNdk23Instance.stringFromJNI()
 
-    /**
-     * A native method that is implemented by the 'ndksandbox' native library,
-     * which is packaged with this application.
-     */
-    private external fun stringFromJNI(): String
-
-    private external fun processPointer(pointer: Long): String
-
-    companion object {
-        // Used to load the 'ndksandbox' library on application startup.
-        init {
-            System.loadLibrary("ndksandbox")
-        }
+        val libNdk21Instance = NativeLibNdk21()
+        libNdk21Instance.stringFromJNI()
     }
 }

@@ -4,29 +4,28 @@ plugins {
 }
 
 android {
-    namespace = "com.dz.nativelibndk23"
-    compileSdk = 34
+    namespace = "com.dz.nativelibndk21"
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 21
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        externalNativeBuild {
+            cmake {
+                cppFlags.add("-fno-rtti")
+            }
+        }
+
+        ndkVersion = "21.4.7075529"
+
         ndk {
             externalNativeBuild {
                 cmake {
                     arguments.add("-DANDROID_STL=c++_shared")
                     arguments.add("-DCMAKE_BUILD_TYPE=Release")
-//                    arguments.add("-DANDROID_STL=none")
                 }
-            }
-        }
-
-        ndkVersion = "23.2.8568313"
-
-        externalNativeBuild {
-            cmake {
-                cppFlags.add("-fno-rtti")
             }
         }
     }
