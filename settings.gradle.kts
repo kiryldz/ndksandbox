@@ -17,3 +17,4 @@ rootProject.name = "NDK Sandbox"
 include(":app")
 include(":nativelibndk23")
 include(":nativelibndk21")
+include(":nativelibndk27")

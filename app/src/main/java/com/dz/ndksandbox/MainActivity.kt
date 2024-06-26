@@ -4,8 +4,9 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.dz.nativelibndk21.NativeLibNdk21
-import com.dz.nativelibndk23.NativeLibNdk23
+//import com.dz.nativelibndk21.NativeLibNdk21
+//import com.dz.nativelibndk23.NativeLibNdk23
+import com.dz.nativelibndk27.NativeLibNdk27
 import com.dz.ndksandbox.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,10 +25,13 @@ class MainActivity : AppCompatActivity() {
 //        val libNdk21Instance = NativeLibNdk21()
 //        binding.sampleText.text = libNdk21Instance.processPointer(pointerFromNdk23)
 
-        val libNdk23Instance = NativeLibNdk23()
-        libNdk23Instance.stringFromJNI()
+//        val libNdk23Instance = NativeLibNdk23()
+//        libNdk23Instance.stringFromJNI()
+//
+//        val libNdk21Instance = NativeLibNdk21()
+//        libNdk21Instance.stringFromJNI()
 
-        val libNdk21Instance = NativeLibNdk21()
-        libNdk21Instance.stringFromJNI()
+        val libNdk27Instance = NativeLibNdk27()
+        binding.sampleText.text = libNdk27Instance.stringFromJNI()
     }
 }

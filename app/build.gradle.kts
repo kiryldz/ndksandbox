@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.ir.backend.js.compile
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -44,9 +42,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
-
     packagingOptions {
-        pickFirst("**/libc++_shared.so")
+        jniLibs {
+            pickFirsts += setOf("**/libc++_shared.so")
+        }
     }
 }
 
@@ -60,6 +59,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation(files("../nativelibndk23/build/outputs/aar/nativelibndk23-release.aar"))
-    implementation(files("../nativelibndk21/build/outputs/aar/nativelibndk21-release.aar"))
+//    implementation(files("../nativelibndk23/build/outputs/aar/nativelibndk23-release.aar"))
+//    implementation(files("../nativelibndk21/build/outputs/aar/nativelibndk21-release.aar"))
+
+    implementation(project(":nativelibndk27"))
 }
